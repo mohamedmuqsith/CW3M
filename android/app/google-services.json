@@ -1,0 +1,29 @@
+{
+    "project_info": {
+        "project_number": "860223498020",
+        "project_id": "smartfoodorder-34a3b",
+        "storage_bucket": "smartfoodorder-34a3b.appspot.com"
+    },
+    "client": [
+        {
+            "client_info": {
+                "mobilesdk_app_id": "1:860223498020:android:2707389e63251f26e435b1",
+                "android_client_info": {
+                    "package_name": "com.example.smart_food_ordering_nutrition_assistant"
+                }
+            },
+            "oauth_client": [],
+            "api_key": [
+                {
+                    "current_key": "YOUR_API_KEY_HERE"
+                }
+            ],
+            "services": {
+                "appinvite_service": {
+                    "other_platform_oauth_client": []
+                }
+            }
+        }
+    ],
+    "configuration_version": "1"
+}

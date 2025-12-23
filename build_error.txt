@@ -1,0 +1,83 @@
+﻿Running Gradle task 'assembleDebug'...                          
+flutter : 
+At line:1 char:1
++ flutter build apk 
+--debug 2>&1 | 
+Out-File -FilePath 
+build_error.txt - ...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (:String   
+ ) [], RemoteExce    
+ption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+FAILURE: Build 
+failed with an 
+exception.
+
+* What went wrong:
+Execution failed for 
+task ':app:processDeb
+ugGoogleServices'.
+> File 
+google-services.json 
+is missing. 
+  The Google 
+Services Plugin 
+cannot function 
+without it. 
+  Searched 
+locations: D:\CW3Mobi
+leApp\smart_food_orde
+ring_nutrition_assist
+ant\android\app\src\d
+ebug\google-services.
+json, D:\CW3MobileApp
+\smart_food_ordering_
+nutrition_assistant\a
+ndroid\app\src\debug\
+google-services.json,
+ D:\CW3MobileApp\smar
+t_food_ordering_nutri
+tion_assistant\androi
+d\app\src\google-serv
+ices.json, D:\CW3Mobi
+leApp\smart_food_orde
+ring_nutrition_assist
+ant\android\app\src\d
+ebug\google-services.
+json, D:\CW3MobileApp
+\smart_food_ordering_
+nutrition_assistant\a
+ndroid\app\src\Debug\
+google-services.json,
+ D:\CW3MobileApp\smar
+t_food_ordering_nutri
+tion_assistant\androi
+d\app\google-services
+.json
+
+* Try:
+> Run with 
+--stacktrace option 
+to get the stack 
+trace.
+> Run with --info or 
+--debug option to 
+get more log output.
+> Run with --scan to 
+get full insights.
+> Get more help at ht
+tps://help.gradle.org
+.
+
+BUILD FAILED in 2s
+Running Gradle task 'assembleDebug'...                           2,916ms
+Gradle task 
+assembleDebug failed 
+with exit code 1

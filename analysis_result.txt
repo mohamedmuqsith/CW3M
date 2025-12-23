@@ -1,0 +1,107 @@
+﻿Analyzing smart_food_ordering_nutrition_assistant...            
+
+   info - The imported package 'path_provider' isn't a dependency of the importing package - lib\core\local\hive_service.dart:2:8 - depend_on_referenced_packages
+warning - Unused import: 'package:path_provider/path_provider.dart' - lib\core\local\hive_service.dart:2:8 - unused_import
+warning - Unused import: '../../../../core/utils/constants.dart' - lib\features\favorites\data\repositories\favorites_repository.dart:2:8 - unused_import
+  error - Target of URI doesn't exist: '../repositories/favorites_repository.dart' - lib\features\favorites\presentation\providers\favorites_providers.dart:6:8 - uri_does_not_exist
+  error - The function 'FavoritesRepository' isn't defined - lib\features\favorites\presentation\providers\favorites_providers.dart:12:10 - undefined_function
+warning - The value of the local variable 'event' isn't used - lib\features\favorites\presentation\providers\favorites_providers.dart:28:20 - unused_local_variable
+  error - Target of URI doesn't exist: '../../food/presentation/screens/food_details_screen.dart' - lib\features\favorites\presentation\screens\favorites_screen.dart:4:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../food/presentation/widgets/food_card.dart' - lib\features\favorites\presentation\screens\favorites_screen.dart:5:8 - uri_does_not_exist
+  error - The method 'FoodCard' isn't defined for the type 'FavoritesScreen' - lib\features\favorites\presentation\screens\favorites_screen.dart:42:22 - undefined_method
+  error - The method 'FoodDetailsScreen' isn't defined for the type 'FavoritesScreen' - lib\features\favorites\presentation\screens\favorites_screen.dart:49:77 - undefined_method
+warning - Unused import: '../../../../core/utils/constants.dart' - lib\features\food\data\datasources\food_local_datasource.dart:2:8 - unused_import
+   info - Field overrides a field inherited from 'Category' - lib\features\food\data\models\category_model.dart:9:16 - overridden_fields
+   info - The member 'id' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\category_model.dart:9:16 - annotate_overrides
+   info - Field overrides a field inherited from 'Category' - lib\features\food\data\models\category_model.dart:11:16 - overridden_fields
+   info - The member 'name' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\category_model.dart:11:16 - annotate_overrides
+   info - Field overrides a field inherited from 'Category' - lib\features\food\data\models\category_model.dart:13:16 - overridden_fields
+   info - The member 'imageUrl' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\category_model.dart:13:16 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:10:16 - overridden_fields
+   info - The member 'id' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:10:16 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:12:16 - overridden_fields
+   info - The member 'name' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:12:16 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:14:16 - overridden_fields
+   info - The member 'description' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:14:16 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:16:16 - overridden_fields
+   info - The member 'price' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:16:16 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:18:16 - overridden_fields
+   info - The member 'categoryId' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:18:16 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:20:16 - overridden_fields
+   info - The member 'imageUrl' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:20:16 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:22:13 - overridden_fields
+   info - The member 'calories' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:22:13 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:24:13 - overridden_fields
+   info - The member 'protein' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:24:13 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:26:13 - overridden_fields
+   info - The member 'carbs' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:26:13 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:28:13 - overridden_fields
+   info - The member 'fat' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:28:13 - annotate_overrides
+   info - Field overrides a field inherited from 'Food' - lib\features\food\data\models\food_model.dart:30:14 - overridden_fields
+   info - The member 'isAvailable' overrides an inherited member but isn't annotated with '@override' - lib\features\food\data\models\food_model.dart:30:14 - annotate_overrides
+warning - Unused import: 'package:uuid/uuid.dart' - lib\features\food\data\repositories\food_repository_impl.dart:1:8 - unused_import
+warning - Unused import: '../../../../core/local/hive_service.dart' - lib\features\food\presentation\providers\food_providers.dart:6:8 - unused_import
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\food\presentation\screens\add_edit_food_screen.dart:107:45 - use_build_context_synchronously
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\features\food\presentation\screens\add_edit_food_screen.dart:135:21 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\food\presentation\widgets\category_card.dart:32:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\food\presentation\widgets\food_card.dart:31:34 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\food\presentation\widgets\food_card.dart:113:64 - deprecated_member_use
+   info - Field overrides a field inherited from 'OrderEntity' - lib\features\orders\data\models\order_model.dart:10:16 - overridden_fields
+   info - The member 'id' overrides an inherited member but isn't annotated with '@override' - lib\features\orders\data\models\order_model.dart:10:16 - annotate_overrides
+   info - Field overrides a field inherited from 'OrderEntity' - lib\features\orders\data\models\order_model.dart:15:16 - overridden_fields
+   info - The member 'totalPrice' overrides an inherited member but isn't annotated with '@override' - lib\features\orders\data\models\order_model.dart:15:16 - annotate_overrides
+   info - Field overrides a field inherited from 'OrderEntity' - lib\features\orders\data\models\order_model.dart:17:18 - overridden_fields
+   info - The member 'timestamp' overrides an inherited member but isn't annotated with '@override' - lib\features\orders\data\models\order_model.dart:17:18 - annotate_overrides
+   info - Field overrides a field inherited from 'OrderEntity' - lib\features\orders\data\models\order_model.dart:19:14 - overridden_fields
+   info - The member 'isSynced' overrides an inherited member but isn't annotated with '@override' - lib\features\orders\data\models\order_model.dart:19:14 - annotate_overrides
+   info - Field overrides a field inherited from 'OrderEntity' - lib\features\orders\data\models\order_model.dart:21:16 - overridden_fields
+   info - The member 'status' overrides an inherited member but isn't annotated with '@override' - lib\features\orders\data\models\order_model.dart:21:16 - annotate_overrides
+  error - Target of URI doesn't exist: '../../orders/domain/entities/order.dart' - lib\features\orders\data\repositories\order_repository_impl.dart:5:8 - uri_does_not_exist
+  error - Undefined class 'OrderEntity' - lib\features\orders\data\repositories\order_repository_impl.dart:21:28 - undefined_class
+  error - The name 'OrderEntity' isn't a type, so it can't be used as a type argument - lib\features\orders\data\repositories\order_repository_impl.dart:54:8 - non_type_as_type_argument
+  error - Target of URI doesn't exist: '../../food/presentation/providers/food_providers.dart' - lib\features\orders\presentation\providers\order_providers.dart:5:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../orders/domain/entities/order.dart' - lib\features\orders\presentation\providers\order_providers.dart:6:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../datasources/order_local_datasource.dart' - lib\features\orders\presentation\providers\order_providers.dart:7:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../datasources/order_remote_datasource.dart' - lib\features\orders\presentation\providers\order_providers.dart:8:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../repositories/order_repository_impl.dart' - lib\features\orders\presentation\providers\order_providers.dart:9:8 - uri_does_not_exist
+  error - The name 'OrderRemoteDataSource' isn't a type, so it can't be used as a type argument - lib\features\orders\presentation\providers\order_providers.dart:13:48 - non_type_as_type_argument
+  error - The function 'OrderRemoteDataSourceImpl' isn't defined - lib\features\orders\presentation\providers\order_providers.dart:14:10 - undefined_function
+  error - Undefined name 'firestoreProvider' - lib\features\orders\presentation\providers\order_providers.dart:14:56 - undefined_identifier
+  error - The function 'OrderRepositoryImpl' isn't defined - lib\features\orders\presentation\providers\order_providers.dart:18:10 - undefined_function
+  error - The function 'OrderLocalDataSource' isn't defined - lib\features\orders\presentation\providers\order_providers.dart:19:22 - undefined_function
+  error - The name 'OrderEntity' isn't a type, so it can't be used as a type argument - lib\features\orders\presentation\providers\order_providers.dart:26:52 - non_type_as_type_argument
+  error - Undefined class 'OrderRepositoryImpl' - lib\features\orders\presentation\providers\order_providers.dart:27:9 - undefined_class
+  error - Undefined class 'OrderEntity' - lib\features\orders\presentation\providers\order_providers.dart:37:28 - undefined_class
+  error - The name 'OrderEntity' isn't a type, so it can't be used as a type argument - lib\features\orders\presentation\providers\order_providers.dart:48:73 - non_type_as_type_argument
+   info - The imported package 'intl' isn't a dependency of the importing package - lib\features\orders\presentation\screens\offline_orders_screen.dart:3:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:intl/intl.dart' - lib\features\orders\presentation\screens\offline_orders_screen.dart:3:8 - uri_does_not_exist
+   info - The imported package 'intl' isn't a dependency of the importing package - lib\features\orders\presentation\widgets\order_item_card.dart:2:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:intl/intl.dart' - lib\features\orders\presentation\widgets\order_item_card.dart:2:8 - uri_does_not_exist
+  error - The method 'DateFormat' isn't defined for the type 'OrderItemCard' - lib\features\orders\presentation\widgets\order_item_card.dart:38:11 - undefined_method
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\orders\presentation\widgets\order_item_card.dart:50:46 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\orders\presentation\widgets\order_item_card.dart:50:79 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\orders\presentation\widgets\quantity_selector.dart:70:43 - deprecated_member_use
+  error - The function 'log' isn't defined - lib\main.dart:18:5 - undefined_function
+  error - The name 'MyApp' isn't a class - test\widget_test.dart:16:35 - creation_with_non_type
+
+flutter : 83 issues 
+found. (ran in 1.7s)
+At line:1 char:1
++ flutter analyze 
+2>&1 | Out-File 
+-FilePath 
+analysis_result.txt 
+-Encodi ...
++ 
+~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (83 issu   
+ es found. (ran i    
+n 1.7s):String)     
+[], RemoteExcept    
+ion
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
