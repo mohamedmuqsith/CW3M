@@ -1,51 +1,47 @@
-import 'dart:developer';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'core/local/hive_service.dart';
-import 'core/utils/app_theme.dart';
-import 'features/food/presentation/screens/home_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'firebase_options.dart';
-import 'core/utils/data_seeder.dart';
+import 'core/utils/app_theme.dart';
+import 'features/workout/presentation/screens/workout_list_screen.dart';
+import 'features/workout/data/models/workout_model.dart';
+import 'features/workout/data/models/exercise_model.dart';
+import 'features/workout/data/datasources/workout_local_datasource.dart'; // for kWorkoutBox constant
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Hive for local storage
-  await HiveService.init();
-
-  // Initialize Firebase with platform-specific options
+  // Initialize Firebase
   try {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
-    log("Firebase initialized successfully");
-
-    // TEMPORARY: Seed demo data
-    // Remove this line after first run/verification
-    await DataSeeder.seedData();
   } catch (e) {
-    log("Firebase initialization failed: $e");
-    // App will continue but Firebase features won't work
+    debugPrint("Firebase initialization failed: $e");
   }
 
-  runApp(
-    const ProviderScope(
-      child: SmartFoodApp(),
-    ),
-  );
+  // Initialize Hive (Local Database)
+  await Hive.initFlutter();
+  Hive.registerAdapter(WorkoutModelAdapter());
+  Hive.registerAdapter(ExerciseModelAdapter());
+  await Hive.openBox<WorkoutModel>(kWorkoutBox);
+
+  runApp(const ProviderScope(child: FitnessApp()));
 }
 
-class SmartFoodApp extends StatelessWidget {
-  const SmartFoodApp({super.key});
+class FitnessApp extends ConsumerWidget {
+  const FitnessApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
-      title: 'Smart Food Ordering',
-      theme: AppTheme.lightTheme,
-      home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
+      title: 'Smart Health & Fitness Tracker',
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
+      home: const WorkoutListScreen(),
     );
   }
 }

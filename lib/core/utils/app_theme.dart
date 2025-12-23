@@ -2,77 +2,53 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  // Food App Color Palette
-  static const Color primaryColor = Color(0xFFFF8A00); // Orange
-  static const Color secondaryColor = Color(0xFF4CAF50); // Green
-  static const Color backgroundColor = Color(0xFFF5F5F5);
-  static const Color errorColor = Color(0xFFE53935);
-  static const Color cardColor = Colors.white;
-
   static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(
-        seedColor: primaryColor,
-        primary: primaryColor,
-        secondary: secondaryColor,
-        // background parameter is deprecated/removed
-        surface: cardColor,
-        error: errorColor,
+        seedColor: const Color(0xFF4CAF50), // Green for Fitness
+        secondary: const Color(0xFF2196F3), // Blue for Activity
+        tertiary: const Color(0xFFFF5722), // Orange for Calories
         brightness: Brightness.light,
       ),
-      scaffoldBackgroundColor: backgroundColor,
+      scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+      cardTheme: CardThemeData(
+        elevation: 2,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        color: Colors.white,
+      ),
       textTheme: GoogleFonts.outfitTextTheme(),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.transparent, // Modern look
+      ),
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: Color(0xFF4CAF50),
+        foregroundColor: Colors.white,
+      ),
+    );
+  }
+
+  static ThemeData get darkTheme {
+    return ThemeData(
+      useMaterial3: true,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: const Color(0xFF4CAF50),
+        secondary: const Color(0xFF2196F3),
+        brightness: Brightness.dark,
+      ),
+      scaffoldBackgroundColor: const Color(0xFF121212),
+      cardTheme: CardThemeData(
+        elevation: 2,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        color: const Color(0xFF1E1E1E),
+      ),
+      textTheme: GoogleFonts.outfitTextTheme(ThemeData.dark().textTheme),
+      appBarTheme: const AppBarTheme(
+        centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
-        centerTitle: true,
-        titleTextStyle: GoogleFonts.outfit(
-          color: Colors.black87,
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-        ),
-        iconTheme: const IconThemeData(color: Colors.black87),
-      ),
-      // CardTheme disabled due to compilation error (potential Flutter SDK mismatch)
-      /* cardTheme: CardTheme(
-        elevation: 2,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
-        color: cardColor,
-      ), */
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: primaryColor,
-          foregroundColor: Colors.white,
-          elevation: 2,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-          textStyle: GoogleFonts.outfit(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-      ),
-      inputDecorationTheme: InputDecorationTheme(
-        filled: true,
-        fillColor: Colors.white,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none,
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none,
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: primaryColor, width: 2),
-        ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       ),
     );
   }
