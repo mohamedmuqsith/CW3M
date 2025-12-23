@@ -5,6 +5,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'firebase_options.dart';
 import 'core/utils/app_theme.dart';
 import 'features/workout/presentation/screens/workout_list_screen.dart';
+import 'features/auth/presentation/screens/login_screen.dart';
+import 'features/auth/presentation/providers/auth_provider.dart';
 import 'features/workout/data/models/workout_model.dart';
 import 'features/workout/data/models/exercise_model.dart';
 import 'features/workout/data/datasources/workout_local_datasource.dart'; // for kWorkoutBox constant
@@ -35,13 +37,29 @@ class FitnessApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final authState = ref.watch(authStateProvider);
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Smart Health & Fitness Tracker',
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: const WorkoutListScreen(),
+      home: authState.when(
+        data: (user) {
+          if (user != null) {
+            return const WorkoutListScreen();
+          } else {
+            return const LoginScreen();
+          }
+        },
+        loading: () => const Scaffold(
+          body: Center(child: CircularProgressIndicator()),
+        ),
+        error: (e, stack) => Scaffold(
+          body: Center(child: Text('Error: $e')),
+        ),
+      ),
     );
   }
 }
